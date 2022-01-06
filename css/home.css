@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(221, 223, 224);
+  }
+main{
+    margin-top: 100px;
+    height: 100vh;
+}
+
+.card{
+    box-shadow: 0px 4px 15px 5px #797979;
+}
+
+.img_news{
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-footer{
+    background: none;
+    border: none;
+}
