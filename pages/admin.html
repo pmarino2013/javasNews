@@ -10,17 +10,18 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../css/perfil.css" />
+    <link rel="stylesheet" href="../css/home.css" />
     <title>JavasNews</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <div class="d-flex align-items-center">
+        <div class="d-flex align-items-center me-2">
           <a class="navbar-brand" href="#"
             ><img src="../img/login_img.png" alt="logo" width="100"
-          /></a>
-          
+          />
+        </a>
+                  
         </div>
         <button
           class="navbar-toggler"
@@ -34,10 +35,19 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse pt-2" id="navbarSupportedContent">
-         
+          <form id="form_search">
+            <input
+              class="form-control"
+              type="search"
+              placeholder="Buscar noticia..."
+              aria-label="Search"
+              id="text_search"
+            />
+            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+          </form>
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="./home.html"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a>
+              <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./about.html"><i class="fa fa-users" aria-hidden="true"></i> Sobre nosotros</a>
@@ -54,10 +64,10 @@
                 <i class="fa fa-user-circle-o" aria-hidden="true"></i>
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#"><i class="fa fa-user-o" aria-hidden="true"></i> Perfil</a></li>
+                <li><a class="dropdown-item" href="./perfil.html"><i class="fa fa-user-o" aria-hidden="true"></i> Perfil</a></li>
 
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="../index.html" id="logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Cerrar sesión</a></li>
+                <li><a class="dropdown-item" href="#" id="logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Cerrar sesión</a></li>
               </ul>
             </li>
           </ul>
@@ -66,30 +76,8 @@
     </nav>
 
     <!-- ------------------------------------------    -->
-   
-        <div class="container" id="contenedor">
-            <div class="row d-flex justify-content-center mt-5">
-              <div class="col-12 col-md-6">
-                <div class="our-team">
-                  <div class="picture">
-                    <img class="img-fluid" src="">
-                  </div>
-                  <div class="team-content">
-                    <h3 class="name"></h3>
-                    <h4 class="title">Web Developer</h4>
-                  </div>
-                  <ul class="social">
-                    <li><a id="facebook" href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
-                    <li><a id="twitter" href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
-                   
-                    <li><a id="linkedin" href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
-                  </ul>
-                </div>
-              </div>
-                  
-                  
-            </div>
-          
+    <main class="container">
+     
     </main>
 
     <footer></footer>
@@ -101,6 +89,6 @@
     ></script>
     <script src="https://use.fontawesome.com/c2813ccf5b.js"></script>
 
-    <script src="../js/perfil.js" type="module"></script> 
+    <!-- <script src="../js/app.js" type="module"></script> -->
   </body>
 </html>

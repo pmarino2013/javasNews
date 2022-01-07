@@ -16,6 +16,7 @@ const usuarios = JSON.parse(localStorage.getItem("users")) || [];
 const usuario = JSON.parse(localStorage.getItem("user")) || null;
 const mensaje = document.querySelector("#mensaje");
 
+
 //-------------------------------------------------------
 const agregarUsuario = function () {
   let id = new Date().getTime();
@@ -62,4 +63,4 @@ const iniciarSesion = function (e) {
   }
 };
 
-agregarUsuario();
+// agregarUsuario();
