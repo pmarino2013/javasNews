@@ -1,7 +1,7 @@
 export const articulos=[
         {
             "source": {
-                "id": null,
+                "id": 1,
                 "name": "TN - Todo Noticias"
             },
             "author": "TN",
@@ -14,7 +14,7 @@ export const articulos=[
         },
         {
             "source": {
-                "id": null,
+                "id": 2,
                 "name": "TN - Todo Noticias"
             },
             "author": "Patricio Caruso",
@@ -27,7 +27,7 @@ export const articulos=[
         },
         {
             "source": {
-                "id": "infobae",
+                "id": 3,
                 "name": "Infobae"
             },
             "author": "anónimo",
@@ -40,7 +40,7 @@ export const articulos=[
         },
         {
             "source": {
-                "id": "infobae",
+                "id": 4,
                 "name": "Infobae"
             },
             "author": "anónimo",
@@ -53,7 +53,7 @@ export const articulos=[
         },
         {
             "source": {
-                "id": null,
+                "id": 5,
                 "name": "Contexto"
             },
             "author": null,
@@ -66,7 +66,7 @@ export const articulos=[
         },
         {
             "source": {
-                "id": null,
+                "id": 6,
                 "name": "La Pampa La Arena"
             },
             "author": "Redaccion Avances",
@@ -79,7 +79,7 @@ export const articulos=[
         },
         {
             "source": {
-                "id": null,
+                "id": 7,
                 "name": "ámbito.com"
             },
             "author": "ámbito.com",
@@ -92,7 +92,7 @@ export const articulos=[
         },
         {
             "source": {
-                "id": "infobae",
+                "id": 8,
                 "name": "Infobae"
             },
             "author": "anónimo",
@@ -105,7 +105,7 @@ export const articulos=[
         },
         {
             "source": {
-                "id": null,
+                "id":9,
                 "name": "Clarín"
             },
             "author": "Clarín.com",
@@ -118,7 +118,7 @@ export const articulos=[
         },
         {
             "source": {
-                "id": null,
+                "id": 10,
                 "name": "Infotechnology.com"
             },
             "author": "Infotechnology.com",
@@ -131,4 +131,5 @@ export const articulos=[
         }
     ]
 
+ 
     

@@ -28,7 +28,7 @@
             <div class="card-body">
               <h5 class="card-title text-center">Inicio de sesión</h5>
               <!-- Formulario para enviar datos, configurar el evento submit  -->
-              <form >
+              <form onsubmit="iniciarSesion(event)">
                 <div class="my-3">
                   <label for="email_text" class="form-label"
                     >Correo electrónico</label
@@ -38,6 +38,7 @@
                     class="form-control"
                     id="email_text"
                     placeholder="name@example.com"
+                    
                     required
                   />
                 </div>
@@ -58,7 +59,7 @@
               </form>
               
                 <div id="mensaje" class="alert alert-danger d-none" role="alert">
-                   Usuario o contraseña incorrecto
+                   Usuario o contraseña incorrecto.
                 </div>
               
               <div  class="text-center">
