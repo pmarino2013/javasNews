@@ -10,7 +10,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/perfil.css" />
     <title>JavasNews</title>
   </head>
   <body>
@@ -37,10 +37,10 @@
           
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="./home.html">Home</a>
+              <a class="nav-link" aria-current="page" href="./home.html"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">About</a>
+              <a class="nav-link active" href="#"><i class="fa fa-users" aria-hidden="true"></i>  Sobre nosotros</a>
             </li>
             <li class="nav-item dropdown dropstart">
               <a
@@ -54,10 +54,10 @@
                 <i class="fa fa-user-circle-o" aria-hidden="true"></i>
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="./perfil.html">Perfil</a></li>
-
+                <li><a class="dropdown-item" href="./perfil.html"><i class="fa fa-user-o" aria-hidden="true"></i> Perfil</a></li>
+                <li id="admin"></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#" id="logout">Cerrar sesión</a></li>
+                <li><a class="dropdown-item" href="#" id="logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Cerrar sesión</a></li>
               </ul>
             </li>
           </ul>
@@ -67,11 +67,84 @@
 
     <!-- ------------------------------------------    -->
     <main class="container" id="contenedor">
-     <div class="row">
-         <div class="col">
-             <h3>Sobre nosotros</h3>
-         </div>
-     </div>
+    <div class="row mt-3">
+      <div class="col-12 col-md-8 offset-md-2 text-center">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una empresa de Noticias que utiliza la tecnología para compartir el conocimiento.</p>
+        <p>Nuestra misión es hacer accesible a todos la información, para que cualquier persona pueda estar enterada de las novedades tecnológicas y avanzar al futuro. </p>
+      </div>
+    </div>
+        <div class="row mt-5">
+          <div class="col-12 col-sm-12 col-md-6">
+            <div class="our-team">
+              <div class="picture">
+                <img class="img-fluid" src="https://picsum.photos/130/130?image=1027">
+              </div>
+              <div class="team-content">
+                <h3 class="name">Michele Miller</h3>
+                <h4 class="title">Community Manager</h4>
+              </div>
+              <ul class="social">
+                <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook" aria-hidden="true"></a></li>
+                <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter" aria-hidden="true"></a></li>
+               
+                <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin" aria-hidden="true"></a></li>
+              </ul>
+            </div>
+          </div>
+              <div class="col-12 col-sm-12 col-md-6">
+            <div class="our-team">
+              <div class="picture">
+                <img class="img-fluid" src="https://picsum.photos/130/130?image=839">
+              </div>
+              <div class="team-content">
+                <h3 class="name">Patricia Knott</h3>
+                <h4 class="title">Web Developer</h4>
+              </div>
+              <ul class="social">
+                <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook" aria-hidden="true"></a></li>
+                <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter" aria-hidden="true"></a></li>
+                
+                <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin" aria-hidden="true"></a></li>
+              </ul>
+            </div>
+          </div>
+              <div class="col-12 col-sm-12 col-md-6">
+            <div class="our-team">
+              <div class="picture">
+                <img class="img-fluid" src="https://picsum.photos/130/130?image=856">
+              </div>
+              <div class="team-content">
+                <h3 class="name">Justin Ramos</h3>
+                <h4 class="title">Scrum Master</h4>
+              </div>
+              <ul class="social">
+                <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook" aria-hidden="true"></a></li>
+                <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter" aria-hidden="true"></a></li>
+                
+                <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin" aria-hidden="true"></a></li>
+              </ul>
+            </div>
+          </div>
+              <div class="col-12 col-sm-12 col-md-6">
+            <div class="our-team">
+              <div class="picture">
+                <img class="img-fluid" src="https://picsum.photos/130/130?image=836">
+              </div>
+              <div class="team-content">
+                <h3 class="name">Mary Huntley</h3>
+                <h4 class="title">CEO</h4>
+              </div>
+              <ul class="social">
+                <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook" aria-hidden="true"></a></li>
+                <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter" aria-hidden="true"></a></li>
+               
+                <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin" aria-hidden="true"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+     
     </main>
 
     <footer></footer>
@@ -83,6 +156,7 @@
     ></script>
     <script src="https://use.fontawesome.com/c2813ccf5b.js"></script>
 
+    <script src="../js/validarAdmin.js"></script>
     <script src="../js/about.js" type="module"></script>
   </body>
 </html>

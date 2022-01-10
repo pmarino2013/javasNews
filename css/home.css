@@ -19,3 +19,7 @@ main{
     background: none;
     border: none;
 }
+
+.enlace{
+    text-decoration: none;
+}

@@ -1,4 +1,15 @@
 import { articulos } from "./data.js";
+
+let hayArticulos=JSON.parse(localStorage.getItem('articulos')) || null
+if(!hayArticulos){
+
+  localStorage.setItem('articulos', JSON.stringify(articulos))
+}
+
+
+let noticias=JSON.parse(localStorage.getItem('articulos'))
+
+
 // console.log(articulos);
 let contenedor = document.querySelector("#container_news");
 let usuario = JSON.parse(localStorage.getItem("user")) || null;
@@ -14,7 +25,7 @@ function validarAuth() {
         </div>
         `;
   }else{
-    cargarNoticias(articulos);
+    cargarNoticias(noticias);
   }
 }
 //--------------------------------------------------------------
@@ -31,6 +42,7 @@ function cargarNoticias(array) {
     contenedor.appendChild(div);
   }
   array.map(function (articulo) {
+   
     let div = document.createElement("div");
     div.classList = "col";
     let tarjeta = `
@@ -55,7 +67,7 @@ function cargarNoticias(array) {
 
 //--------------buscar por portal de noticia-----------------
 function buscarSource(termino) {
-  let resultado = articulos.filter(function (articulo) {
+  let resultado = noticias.filter(function (articulo) {
     return articulo.source.name.toLowerCase().includes(termino.toLowerCase());
   });
 
@@ -65,7 +77,7 @@ function buscarSource(termino) {
 
 //---------Buscar noticia-------------------------------
 function buscarNews(termino) {
-  let resultado = articulos.filter(function (articulo) {
+  let resultado = noticias.filter(function (articulo) {
     return articulo.title.toLowerCase().includes(termino.toLowerCase());
   });
 
@@ -86,7 +98,7 @@ document.querySelector("#form_search").addEventListener("submit", function (e) {
 
 document.querySelector("#text_search").addEventListener("click", function () {
   document.querySelector("#text_search").value = "";
-  cargarNoticias(articulos);
+  cargarNoticias(noticias);
 });
 
 document.querySelector("#logout").addEventListener("click", function () {

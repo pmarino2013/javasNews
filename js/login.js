@@ -16,6 +16,7 @@ const usuarios = JSON.parse(localStorage.getItem("users")) || [];
 const usuario = JSON.parse(localStorage.getItem("user")) || null;
 const mensaje = document.querySelector("#mensaje");
 
+
 //-------------------------------------------------------
 const agregarUsuario = function () {
   let id = new Date().getTime();
@@ -27,6 +28,13 @@ const agregarUsuario = function () {
       "pmarino@gmail.com",
       "pm123456",
       "http://1.gravatar.com/avatar/2bd6474c77fd501924adfa0aae631f57"
+    ),
+    new Usuario(
+      99,
+      "Admin",
+      "admin@admin.com.ar",
+      "admin",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx_7XSeoV5uoxiFIbSEg9QT-YT7TFqgvuxag&usqp=CAU"
     )
   );
 
@@ -62,4 +70,4 @@ const iniciarSesion = function (e) {
   }
 };
 
-agregarUsuario();
+// agregarUsuario();
