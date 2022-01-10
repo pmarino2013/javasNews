@@ -62,6 +62,7 @@
                     ><i class="fa fa-user-o" aria-hidden="true"></i> Perfil</a
                   >
                 </li>
+                <li id="admin"></li>
 
                 <li><hr class="dropdown-divider" /></li>
                 <li>
@@ -78,7 +79,7 @@
     </nav>
 
     <!-- ------------------------------------------    -->
-    <main class="container mb-3">
+    <main class="container mb-3" id="contenedorPrincipal">
       <div class="row">
         <div class="col">
           <h3 class="text-center">Agregar noticia</h3>
@@ -173,7 +174,6 @@
                   cols="30"
                   rows="5"
                   aria-describedby="inputGroupPrepend"
-                  
                 ></textarea>
               </div>
             </div>
@@ -219,113 +219,123 @@
 
     <footer></footer>
 
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="myModal"
+      tabindex="-1"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="myModalLabel">Actualizar Noticia</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3" id="formularioModal">
+              <div class="col-12 col-md-6">
+                <label for="updatePortal" class="form-label"
+                  >Portal de noticias</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="updatePortal"
+                  required
+                />
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="updateAutor" class="form-label">Autor</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="updateAutor"
+                  required
+                />
+              </div>
+              <div class="col-12">
+                <label for="updateTitulo" class="form-label">Título</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="updateTitulo"
+                  required
+                />
+              </div>
+              <div class="col-12">
+                <label for="updateDescripcion" class="form-label"
+                  >Descripción</label
+                >
+                <div class="input-group has-validation">
+                  <textarea
+                    class="form-control"
+                    id="updateDescripcion"
+                    cols="30"
+                    rows="5"
+                    aria-describedby="inputGroupPrepend"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="updateUrl" class="form-label"
+                  >Url de la noticia</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="updateUrl"
+                  required
+                />
+              </div>
+              <div class="col-12">
+                <label for="updateImagen" class="form-label"
+                  >Url de la imagen</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="updateImagen"
+                  required
+                />
+              </div>
 
-    
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="myModalLabel">Actualizar Noticia</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form class="row g-3" id="formularioModal">
-          <div class="col-12 col-md-6">
-            <label for="updatePortal" class="form-label"
-              >Portal de noticias</label
-            >
-            <input
-              type="text"
-              class="form-control"
-              id="updatePortal"
-              required
-            />
-          </div>
-          <div class="col-12 col-md-6">
-            <label for="updateAutor" class="form-label">Autor</label>
-            <input
-              type="text"
-              class="form-control"
-              id="updateAutor"
-              required
-            />
-          </div>
-          <div class="col-12">
-            <label for="updateTitulo" class="form-label">Título</label>
-            <input
-              type="text"
-              class="form-control"
-              id="updateTitulo"
-              required
-            />
-          </div>
-          <div class="col-12">
-            <label for="updateDescripcion" class="form-label"
-              >Descripción</label
-            >
-            <div class="input-group has-validation">
-              <textarea
-                class="form-control"
-                id="updateDescripcion"
-                cols="30"
-                rows="5"
-                aria-describedby="inputGroupPrepend"
-                required
-              ></textarea>
-            </div>
-          </div>
-          <div class="col-12">
-            <label for="updateUrl" class="form-label"
-              >Url de la noticia</label
-            >
-            <input
-              type="text"
-              class="form-control"
-              id="updateUrl"
-              required
-            />
-          </div>
-          <div class="col-12">
-            <label for="updateImagen" class="form-label"
-              >Url de la imagen</label
-            >
-            <input
-              type="text"
-              class="form-control"
-              id="updateImagen"
-              required
-            />
-          </div>
-          
-          <div class="col-12">
-            <label for="updateContenido" class="form-label"
-              >Contenido</label
-            >
-            <div class="input-group has-validation">
-              <textarea
-                class="form-control"
-                id="updateContenido"
-                cols="30"
-                rows="5"
-                aria-describedby="inputGroupPrepend"
-                
-              ></textarea>
-            </div>
-          </div>
+              <div class="col-12">
+                <label for="updateContenido" class="form-label"
+                  >Contenido</label
+                >
+                <div class="input-group has-validation">
+                  <textarea
+                    class="form-control"
+                    id="updateContenido"
+                    cols="30"
+                    rows="5"
+                    aria-describedby="inputGroupPrepend"
+                  ></textarea>
+                </div>
+              </div>
 
-          <div class="col-12 d-flex justify-content-end">
-            <button class="btn btn-primary" type="submit">Actualizar</button>
+              <div class="col-12 d-flex justify-content-end">
+                <button class="btn btn-primary" type="submit">
+                  Actualizar
+                </button>
+              </div>
+            </form>
           </div>
-        </form>
-      </div>
-      <!-- <div class="modal-footer">
+          <!-- <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
       </div> -->
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -334,6 +344,7 @@
     ></script>
     <script src="https://use.fontawesome.com/c2813ccf5b.js"></script>
 
+    <script src="../js/validarAdmin.js"></script>
     <script src="../js/admin.js"></script>
   </body>
 </html>

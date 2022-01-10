@@ -22,11 +22,41 @@ class Articulo {
 
 let noticias = JSON.parse(localStorage.getItem("articulos"));
 
+// let usuario=JSON.parse(localStorage.getItem('user')) || null
+
+let menuPrincipal=document.querySelector('#navbarSupportedContent')
+
+let container=document.querySelector('#contenedorPrincipal')
+
 let cuerpoTabla = document.querySelector("#cuerpo_tabla");
 
 let myModal = new bootstrap.Modal(document.getElementById('myModal'))
 
 let indiceNoticia=null
+
+//------------------------------------------------------
+
+const validarAdmin=function(usuario){
+
+//  console.log(usuario)
+//  console.log(container)
+    if(usuario?.email!=='admin@admin.com.ar'){
+      menuPrincipal.innerHTML=""
+      container.innerHTML=`<div class="row">
+      <div class="col">
+        <div class="alert alert-danger" role="alert">
+         <span>No tiene los permisos para acceder a este contenido, debe loguarse como adminstrador. <a href="./home.html" >Volver</a></span>
+        </div>
+      </div>
+    </div>`
+    }else{
+      cargarTabla(noticias);
+    }
+
+
+}
+
+
 //------------------------------------------------------
 function cargarTabla(array) {
   cuerpoTabla.innerHTML = "";
@@ -153,4 +183,5 @@ document.querySelector('#formularioModal').addEventListener("submit", function(e
   actualizarNoticia()
 })
 
-cargarTabla(noticias);
+// cargarTabla(noticias);
+validarAdmin(usuario)

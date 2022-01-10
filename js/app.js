@@ -1,6 +1,11 @@
-// import { articulos } from "./data.js";
+import { articulos } from "./data.js";
 
-// localStorage.setItem('articulos', JSON.stringify(articulos))
+let hayArticulos=JSON.parse(localStorage.getItem('articulos')) || null
+if(!hayArticulos){
+
+  localStorage.setItem('articulos', JSON.stringify(articulos))
+}
+
 
 let noticias=JSON.parse(localStorage.getItem('articulos'))
 
