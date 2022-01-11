@@ -1,14 +1,11 @@
 import { articulos } from "./data.js";
 
-let hayArticulos=JSON.parse(localStorage.getItem('articulos')) || null
-if(!hayArticulos){
-
-  localStorage.setItem('articulos', JSON.stringify(articulos))
+let hayArticulos = JSON.parse(localStorage.getItem("articulos")) || null;
+if (!hayArticulos) {
+  localStorage.setItem("articulos", JSON.stringify(articulos));
 }
 
-
-let noticias=JSON.parse(localStorage.getItem('articulos'))
-
+let noticias = JSON.parse(localStorage.getItem("articulos"));
 
 // console.log(articulos);
 let contenedor = document.querySelector("#container_news");
@@ -17,14 +14,14 @@ let usuario = JSON.parse(localStorage.getItem("user")) || null;
 //-------Función que valida si el usuario se logueo-----------
 function validarAuth() {
   if (!usuario) {
-    document.querySelector("#navbarSupportedContent").classList="d-none";
+    document.querySelector("#navbarSupportedContent").classList = "d-none";
     contenedor.classList = "row row-cols-1";
     contenedor.innerHTML = `
         <div class="alert alert-danger" role="alert">
         No puede acceder a esta información. Para poder continuar debe loguearse, puede hacerlo desde <a href="../index.html">aquí</a>
         </div>
         `;
-  }else{
+  } else {
     cargarNoticias(noticias);
   }
 }
@@ -32,6 +29,14 @@ function validarAuth() {
 
 function cargarNoticias(array) {
   contenedor.innerHTML = "";
+
+  //Ordenar datos de tabla por noticia mas nueva
+  function SortArray(x, y) {
+    return y.publishedAt.localeCompare(x.publishedAt);
+  }
+
+  array.sort(SortArray);
+  // ----------------------------------------------
 
   if (array.length <= 0) {
     let div = document.createElement("div");
@@ -42,7 +47,6 @@ function cargarNoticias(array) {
     contenedor.appendChild(div);
   }
   array.map(function (articulo) {
-   
     let div = document.createElement("div");
     div.classList = "col";
     let tarjeta = `
@@ -105,5 +109,4 @@ document.querySelector("#logout").addEventListener("click", function () {
   location.replace("../index.html");
 });
 
-
-validarAuth()
+validarAuth();
